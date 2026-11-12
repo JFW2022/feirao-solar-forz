@@ -1,5 +1,4 @@
 import { useState, useCallback, useEffect } from 'react';
-import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { BenefitsSection } from './components/BenefitsSection';
 import { SolarCalculator } from './components/SolarCalculator';
@@ -65,8 +64,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-[#041026] text-slate-900">
-      <Header onCtaClick={scrollToForm} />
-
       <main>
         <HeroSection
           selectedBillRange={selectedBillRange}

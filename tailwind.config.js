@@ -24,7 +24,7 @@ export default {
       animation: {
         'marquee-slow': 'marqueeY 34s linear infinite',
         'marquee-slow-reverse': 'marqueeYReverse 38s linear infinite',
-        'marquee-x': 'marqueeX 32s linear infinite',
+        'marquee-x': 'marqueeX 46s linear infinite',
       },
       keyframes: {
         marqueeY: {
