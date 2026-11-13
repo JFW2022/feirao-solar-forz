@@ -18,6 +18,9 @@ interface ThankYouModalProps {
 const WHATSAPP_NUMBER =
   import.meta.env.VITE_WHATSAPP_NUMBER?.trim() || '5562981209985';
 
+const DEFAULT_GROUP_URL =
+  'https://chat.whatsapp.com/FN38VBBRq8jD0mxsNpZMcU?s=cl&p=i&iam=2';
+
 export function ThankYouModal({ lead, onClose }: ThankYouModalProps) {
   useEffect(() => {
     if (!lead) return;
@@ -41,15 +44,12 @@ export function ThankYouModal({ lead, onClose }: ThankYouModalProps) {
   const firstName = lead.nome.split(' ')[0];
 
   const groupUrlEnv = import.meta.env.VITE_WHATSAPP_GROUP_URL?.trim();
-  const groupMessage = encodeURIComponent(
-    `Olá! Sou ${lead.nome} de ${lead.cidade}/${lead.estado}. Acabei de me cadastrar no Feirão FORZ Energia Solar (conta de ${lead.valorContaLuz}) e quero entrar no Grupo VIP do Feirão para garantir os 15% OFF!`
-  );
 
-  // If official WhatsApp Group invite link is configured, send directly to group; otherwise open direct WhatsApp requesting group access
+  // Primary link: direct official WhatsApp Group invite
   const groupButtonHref =
     groupUrlEnv && !groupUrlEnv.includes('placeholder')
       ? groupUrlEnv
-      : `https://wa.me/${WHATSAPP_NUMBER}?text=${groupMessage}`;
+      : DEFAULT_GROUP_URL;
 
   const directSpecialistHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     `Olá equipe FORZ! Me chamo ${lead.nome}, sou de ${lead.cidade} (${lead.estado}). Preenchi a simulação do Feirão com conta média de ${lead.valorContaLuz} e gostaria de falar com um especialista sobre o parcelamento em até 120x.`
