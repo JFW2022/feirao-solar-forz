@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react';
-import {
-  Clock,
-  CheckCircle2,
-  MapPin,
-  Users,
-  ShieldCheck,
-  BadgeCheck,
-} from 'lucide-react';
+import { Clock } from 'lucide-react';
 import { LeadForm } from './LeadForm';
 import { InfiniteCarousel } from './InfiniteCarousel';
 import { LeadPayload } from '../types/lead';
@@ -85,123 +78,28 @@ export function HeroSection({
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
-          {/* Lado Esquerdo: Logo + Cronômetro + Selo + Headline + Benefícios + Autoridade */}
-          <div className="min-w-0 text-left lg:col-span-6">
-            {/* Logo e Assinatura Oficial */}
-            <div className="mb-5 flex flex-wrap items-center gap-3">
+          {/* Lado Esquerdo: Apenas Logo + Relógio + Texto Oficial */}
+          <div className="flex min-w-0 flex-col items-start justify-center gap-6 text-left lg:col-span-6">
+            {/* Logo Oficial FORZ */}
+            <div className="flex items-center gap-3">
               <img
                 src="/images/logo-forz.png"
                 alt="FORZ Energia Solar"
-                className="h-12 w-auto object-contain drop-shadow-lg sm:h-14"
+                className="h-12 w-auto object-contain drop-shadow-lg sm:h-16"
               />
-              <span className="rounded-full border border-white/15 bg-[#041026]/70 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-300 backdrop-blur-sm">
-                Uma realização oficial FORZ Energia Solar
-              </span>
             </div>
 
-            {/* 1. Cronômetro de Contagem Regressiva */}
-            <div className="mb-3">
+            {/* Relógio de Contagem Regressiva */}
+            <div>
               <CountdownBadge />
             </div>
 
-            {/* 2. Selo de Localização */}
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#0099FF]/40 bg-[#041026]/85 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-[#38BDF8] backdrop-blur-sm sm:text-sm">
-              <MapPin className="h-4 w-4 shrink-0 text-[#0099FF]" />
-              <span>Feirão válido para todo o Estado de Goiás e Distrito Federal</span>
-            </div>
-
-            {/* 3. Título Principal (Headline) */}
-            <h1 className="font-display text-2xl font-black leading-[1.14] tracking-tight text-white drop-shadow-sm sm:text-4xl lg:text-[2.65rem]">
-              Mega Feirão Solar 12/12:{' '}
-              <span className="text-[#FFB800]">Até 15% OFF</span> e parcelamento
-              bancário em <span className="text-[#38BDF8]">até 120x S/Entrada</span>,
-              com até 120 dias de carência para começar a pagar.
+            {/* Texto Oficial */}
+            <h1 className="font-display text-4xl font-black uppercase leading-[1.08] tracking-tight text-white drop-shadow-xl sm:text-5xl lg:text-6xl xl:text-7xl">
+              MEGA FEIRÃO <br />
+              <span className="text-[#FFB800]">SOLAR FORZ</span> <br />
+              <span className="text-[#38BDF8]">12/12</span>
             </h1>
-
-            {/* 4. Subtítulo (Subheadline) */}
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-100 sm:text-lg">
-              Reduza em até <strong className="text-white">95%</strong> a sua conta
-              de energia elétrica com parcelas que se pagam com a própria economia
-              gerada todo mês através do sistema solar.
-            </p>
-
-            {/* 5. Lista de Benefícios Principais */}
-            <ul className="mt-6 space-y-3.5 text-sm font-medium text-slate-100 sm:text-base">
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#FFB800]" />
-                <span>
-                  <strong className="text-white">Até 15% de desconto real e exclusivo</strong>{' '}
-                  para quem estiver no Grupo VIP Mega Feirão Solar 12/12.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#FFB800]" />
-                <span>
-                  <strong className="text-white">Prazo de até 120x sem entrada</strong>:{' '}
-                  até 120 dias de carência para o primeiro pagamento e parcelas
-                  fixas podendo ficar até 40% a menos que a sua conta atual de energia.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#FFB800]" />
-                <span>
-                  <strong className="text-white">Homologação e instalação técnica ágil</strong>:{' '}
-                  seu sistema funcionando no prazo máximo de 30 dias.
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#FFB800]" />
-                <span>
-                  <strong className="text-white">Garantia de até 30 anos</strong>{' '}
-                  de eficiência energética dos painéis e pós-venda dedicado.
-                </span>
-              </li>
-            </ul>
-
-            {/* 6. Selos de Autoridade */}
-            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
-              <div className="flex items-center gap-3 rounded-2xl border border-emerald-400/40 bg-[#041026]/85 p-3.5 backdrop-blur-md">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-[#041026]">
-                  <Users className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-sm font-extrabold uppercase tracking-wide text-emerald-300">
-                    +700 Clientes Atendidos
-                  </p>
-                  <p className="text-xs font-medium text-slate-300">
-                    Economia comprovada em GO e DF
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 rounded-2xl border border-white/15 bg-[#041026]/85 p-3.5 backdrop-blur-md">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#003882] text-[#FFB800]">
-                  <ShieldCheck className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-white">
-                    Equipamentos auditados
-                  </p>
-                  <p className="text-xs font-medium text-slate-300">
-                    Certificados pelo INMETRO
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3 rounded-2xl border border-[#38BDF8]/30 bg-[#041026]/85 p-3.5 backdrop-blur-md sm:col-span-2">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#0099FF]/20 text-[#38BDF8]">
-                  <BadgeCheck className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wider text-white sm:text-sm">
-                    Empresa Registrada no CREA
-                  </p>
-                  <p className="text-xs font-medium text-slate-300">
-                    Engenharia técnica responsável e segurança jurídica total
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Lado Direito: Formulário Suspenso sobre o Carrossel Infinito da Seção */}
