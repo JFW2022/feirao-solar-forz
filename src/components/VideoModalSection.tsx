@@ -109,13 +109,26 @@ const ArrowHorizontal = ({ direction }: { direction: 'right' | 'left' }) => (
   </div>
 );
 
-const StepCard = ({ step, label }: { step: string; label: string }) => (
-  <div className="flex min-h-[76px] flex-1 min-w-0 flex-col items-center justify-center rounded-xl border border-slate-200 bg-white p-3 text-center shadow-sm sm:min-h-[86px] sm:p-4">
-    <span className="mb-1 text-[10px] font-extrabold uppercase tracking-widest text-[#0066FF]">
-      {step}
-    </span>
-    <p className="text-xs font-bold leading-tight text-[#041026] sm:text-sm">
-      {label}
+interface StepCardProps {
+  step: string;
+  badge?: string;
+  text: string;
+}
+
+const StepCard = ({ step, badge, text }: StepCardProps) => (
+  <div className="flex min-h-[110px] flex-1 min-w-0 flex-col justify-start rounded-2xl border border-slate-200 bg-white p-3.5 sm:p-4 text-left shadow-sm transition-all hover:border-[#0066FF]/40 hover:shadow-md">
+    <div className="mb-2 flex flex-wrap items-center gap-1.5">
+      <span className="rounded-md bg-[#003882] px-2 py-0.5 text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-white">
+        {step}
+      </span>
+      {badge && (
+        <span className="rounded-md bg-[#FFB800]/20 px-2 py-0.5 text-[10px] sm:text-[11px] font-black uppercase tracking-wider text-[#041026]">
+          {badge}
+        </span>
+      )}
+    </div>
+    <p className="text-xs sm:text-[13px] font-semibold leading-relaxed text-slate-700">
+      {text}
     </p>
   </div>
 );
@@ -147,69 +160,109 @@ export function VideoModalSection({ onGoToForm }: VideoModalSectionProps) {
       className="w-full bg-[#F1F5F9] py-16 sm:py-24"
     >
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:px-6 lg:flex-row lg:px-8">
-        {/* Esquerda - Fluxo do Processo (Formato Erro-Zero) */}
-        <div className="flex w-full flex-1 flex-col items-start gap-5">
+        {/* Esquerda - Fluxo do Processo (Formato Oficial Erro-Zero) */}
+        <div className="flex w-full flex-1 flex-col items-start gap-4">
           <span className="rounded-full bg-[#003882]/10 px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-[#003882]">
-            Sem Burocracia
+            Passo a Passo Oficial
           </span>
           <h2 className="font-display text-3xl font-black tracking-tight text-[#041026] sm:text-4xl lg:text-5xl">
-            COMO FUNCIONA O FEIRÃO FORZ
+            Como vai funcionar o Mega Feirão Solar 12/12
           </h2>
-          <p className="max-w-lg text-sm leading-relaxed text-slate-600 sm:text-base">
-            Da simulação até a sua usina solar gerando economia na conta da
-            Equatorial Goiás ou Neoenergia DF, nós cuidamos de 100% do processo.
+          <p className="max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            Siga os 4 passos simples abaixo para garantir as condições do nosso feirão:
           </p>
 
-          <div className="mt-2 flex w-full max-w-[540px] flex-col">
-            {/* Linha 1: PASSO 1 -> PASSO 2 */}
+          {/* Desktop / Tablet Serpentine Grid */}
+          <div className="mt-2 hidden sm:flex w-full max-w-[580px] flex-col">
+            {/* Linha 1: Passo 01 -> Passo 02 */}
             <div className="flex w-full items-stretch">
               <StepCard
                 step="Passo 01"
-                label="CADASTRO NO FEIRÃO & GRUPO VIP"
+                text="Preencha o formulário no topo desta página e entre gratuitamente no nosso Grupo VIP silencioso do WhatsApp."
               />
               <ArrowHorizontal direction="right" />
               <StepCard
                 step="Passo 02"
-                label="PROJETO TÉCNICO & 15% OFF"
+                text="Assim que entrar no nosso grupo VIP, nossa equipe de engenharia analisa o perfil da sua conta de luz para deixar sua proposta pré-aprovada."
               />
             </div>
 
             <ArrowDown align="right" />
 
-            {/* Linha 2: PASSO 4 <- PASSO 3 */}
+            {/* Linha 2: Passo 04 <- Passo 03 */}
             <div className="flex w-full items-stretch">
               <StepCard
                 step="Passo 04"
-                label="HOMOLOGAÇÃO EQUATORIAL / NEOENERGIA"
+                text="Fechou sua condição no feirão? Cuidamos de toda a homologação junto à concessionária local da sua energia e entregamos seu sistema gerando economia em no máximo 30 dias."
               />
               <ArrowHorizontal direction="left" />
               <StepCard
                 step="Passo 03"
-                label="FINANCIAMENTO EM ATÉ 120X"
+                badge="Liberação no dia 12/12"
+                text="No dia 12, dia do mega feirão, vamos liberar exclusivamente no grupo os lotes com até 15% OFF."
               />
             </div>
 
             <ArrowDown align="left" />
 
             {/* Conclusão */}
-            <div className="flex min-h-[82px] w-full flex-col items-center justify-center gap-1 rounded-xl border border-[#003882]/20 bg-[#041026] p-4 text-center text-white shadow-md">
+            <div className="flex min-h-[76px] w-full flex-col items-center justify-center gap-1 rounded-xl border border-[#003882]/20 bg-[#041026] p-4 text-center text-white shadow-md">
               <p className="text-sm font-black uppercase tracking-wider text-[#FFB800]">
                 USINA GERANDO ECONOMIA DE ATÉ 95%
               </p>
               <p className="text-xs font-medium text-slate-300 sm:text-sm">
-                Até 30 anos de garantia de eficiência, monitoramento pelo celular e valorização do
-                imóvel
+                Até 30 anos de garantia de eficiência dos painéis e pós-venda dedicado
+              </p>
+            </div>
+          </div>
+
+          {/* Mobile Stacked Flow */}
+          <div className="mt-2 flex sm:hidden w-full flex-col gap-2.5">
+            <StepCard
+              step="Passo 01"
+              text="Preencha o formulário no topo desta página e entre gratuitamente no nosso Grupo VIP silencioso do WhatsApp."
+            />
+            <ArrowDown align="center" />
+            <StepCard
+              step="Passo 02"
+              text="Assim que entrar no nosso grupo VIP, nossa equipe de engenharia analisa o perfil da sua conta de luz para deixar sua proposta pré-aprovada."
+            />
+            <ArrowDown align="center" />
+            <StepCard
+              step="Passo 03"
+              badge="Liberação no dia 12/12"
+              text="No dia 12, dia do mega feirão, vamos liberar exclusivamente no grupo os lotes com até 15% OFF."
+            />
+            <ArrowDown align="center" />
+            <StepCard
+              step="Passo 04"
+              text="Fechou sua condição no feirão? Cuidamos de toda a homologação junto à concessionária local da sua energia e entregamos seu sistema gerando economia em no máximo 30 dias."
+            />
+            <ArrowDown align="center" />
+            <div className="flex w-full flex-col items-center justify-center gap-1 rounded-xl border border-[#003882]/20 bg-[#041026] p-4 text-center text-white shadow-md">
+              <p className="text-xs font-black uppercase tracking-wider text-[#FFB800]">
+                USINA GERANDO ECONOMIA DE ATÉ 95%
+              </p>
+              <p className="text-[11px] font-medium text-slate-300">
+                Até 30 anos de garantia de eficiência dos painéis e pós-venda dedicado
               </p>
             </div>
           </div>
         </div>
 
         {/* Direita - Card de Vídeo Vertical 3:4 (Padrão exato Erro-Zero) */}
-        <div className="flex w-full flex-1 flex-col items-center justify-center gap-5">
+        <div className="flex w-full flex-1 flex-col items-center justify-center gap-4">
+          {/* Acima do vídeo */}
+          <div className="flex items-center gap-2 rounded-full bg-[#003882] px-4 py-2 text-xs font-black uppercase tracking-wider text-[#FFB800] shadow-md">
+            <Play className="h-4 w-4 fill-[#FFB800] text-[#FFB800]" />
+            <span>ASSISTA AO VÍDEO E ENTENDA O PROCESSO</span>
+          </div>
+
+          {/* Player do Vídeo / Card 3:4 Vertical */}
           <button
             type="button"
             onClick={openVideo}
-            aria-label="Assistir ao vídeo explicativo do Feirão FORZ"
+            aria-label="Assistir ao vídeo explicativo do Mega Feirão Solar 12/12"
             className="group relative block aspect-[3/4] w-full max-w-[290px] cursor-pointer overflow-hidden rounded-3xl border-4 border-[#041026] bg-[#041026] shadow-2xl transition-transform hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#0066FF] sm:max-w-[330px] md:max-w-[380px]"
           >
             <img
@@ -234,15 +287,16 @@ export function VideoModalSection({ onGoToForm }: VideoModalSectionProps) {
             </div>
           </button>
 
+          {/* Botão abaixo do vídeo */}
           <button
             type="button"
-            onClick={openVideo}
-            className="inline-flex max-w-full cursor-pointer items-center justify-center gap-2 rounded-xl bg-[#041026] px-6 py-3.5 text-white shadow-lg transition-colors hover:bg-[#071733] active:translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF]"
+            onClick={onGoToForm}
+            className="flex w-full max-w-[380px] cursor-pointer items-center justify-center gap-2.5 rounded-xl bg-[#FFB800] px-6 py-4 text-center font-black uppercase tracking-wide text-[#041026] shadow-lg shadow-[#FFB800]/25 transition-all hover:bg-[#ffc933] active:translate-y-[1px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0066FF]"
           >
-            <Play className="h-4 w-4 fill-[#FFB800] text-[#FFB800]" />
-            <span className="text-center text-xs font-extrabold uppercase tracking-wide sm:text-sm md:text-base">
-              ASSISTA AO VÍDEO E ENTENDA O PROCESSO
+            <span className="text-xs sm:text-sm md:text-base">
+              GARANTIR MINHA VAGA NO GRUPO VIP
             </span>
+            <ArrowRight className="h-5 w-5 shrink-0" />
           </button>
         </div>
       </div>
@@ -334,7 +388,7 @@ export function VideoModalSection({ onGoToForm }: VideoModalSectionProps) {
                   }}
                   className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#FFB800] px-4 py-3.5 text-sm font-black uppercase text-[#041026] transition-colors hover:bg-[#ffc933]"
                 >
-                  Simular meu desconto agora
+                  Garantir minha vaga no Grupo VIP
                   <ArrowRight className="h-4 w-4" />
                 </button>
               </div>

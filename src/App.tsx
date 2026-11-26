@@ -65,19 +65,25 @@ export default function App() {
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-[#041026] text-slate-900">
       <main>
+        {/* 1ª Dobra: Topo e Formulário Oficial */}
         <HeroSection
           selectedBillRange={selectedBillRange}
           onFormSuccess={handleFormSuccess}
         />
 
-        <BenefitsSection />
-
-        <SolarCalculator onApplyToForm={handleApplyCalculatorRange} />
-
+        {/* 2ª Dobra: Como Funciona o Mega Feirão Solar 12/12 + VSL */}
         <VideoModalSection onGoToForm={scrollToForm} />
 
+        {/* 3ª Dobra: Benefícios Oficiais do Feirão */}
+        <BenefitsSection />
+
+        {/* 4ª Dobra: Simulador de Economia Instantâneo */}
+        <SolarCalculator onApplyToForm={handleApplyCalculatorRange} />
+
+        {/* 5ª Dobra: Cobertura Regional GO & DF */}
         <RegionalCoverage onCtaClick={scrollToForm} />
 
+        {/* 6ª Dobra: Dúvidas Frequentes */}
         <FAQSection />
       </main>
 
