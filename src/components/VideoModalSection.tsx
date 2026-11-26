@@ -206,12 +206,12 @@ export function VideoModalSection({ onGoToForm }: VideoModalSectionProps) {
             <ArrowDown align="left" />
 
             {/* Conclusão */}
-            <div className="flex min-h-[76px] w-full flex-col items-center justify-center gap-1 rounded-xl border border-[#003882]/20 bg-[#041026] p-4 text-center text-white shadow-md">
-              <p className="text-sm font-black uppercase tracking-wider text-[#FFB800]">
-                USINA GERANDO ECONOMIA DE ATÉ 95%
+            <div className="flex min-h-[68px] w-full flex-col items-center justify-center gap-1 rounded-xl border border-emerald-400/30 bg-[#041026] p-4 text-center text-white shadow-md">
+              <p className="text-sm font-black uppercase tracking-wider text-emerald-400">
+                Resultado: Usina gerando energia e economia real todo mês
               </p>
-              <p className="text-xs font-medium text-slate-300 sm:text-sm">
-                Até 30 anos de garantia de eficiência dos painéis e pós-venda dedicado
+              <p className="text-xs font-medium text-slate-300">
+                Você livre dos aumentos das distribuidoras com monitoramento direto no celular
               </p>
             </div>
           </div>
@@ -239,12 +239,12 @@ export function VideoModalSection({ onGoToForm }: VideoModalSectionProps) {
               text="Fechou sua condição no feirão? Cuidamos de toda a homologação junto à concessionária local da sua energia e entregamos seu sistema gerando economia em no máximo 30 dias."
             />
             <ArrowDown align="center" />
-            <div className="flex w-full flex-col items-center justify-center gap-1 rounded-xl border border-[#003882]/20 bg-[#041026] p-4 text-center text-white shadow-md">
-              <p className="text-xs font-black uppercase tracking-wider text-[#FFB800]">
-                USINA GERANDO ECONOMIA DE ATÉ 95%
+            <div className="flex w-full flex-col items-center justify-center gap-1 rounded-xl border border-emerald-400/30 bg-[#041026] p-4 text-center text-white shadow-md">
+              <p className="text-xs font-black uppercase tracking-wider text-emerald-400">
+                Resultado: Usina gerando energia e economia todo mês
               </p>
               <p className="text-[11px] font-medium text-slate-300">
-                Até 30 anos de garantia de eficiência dos painéis e pós-venda dedicado
+                Você livre dos aumentos da conta de luz com monitoramento no celular
               </p>
             </div>
           </div>

@@ -1,8 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { HeroSection } from './components/HeroSection';
-import { BenefitsSection } from './components/BenefitsSection';
-import { SolarCalculator } from './components/SolarCalculator';
 import { VideoModalSection } from './components/VideoModalSection';
+import { SolarCalculator } from './components/SolarCalculator';
 import { RegionalCoverage } from './components/RegionalCoverage';
 import { FAQSection } from './components/FAQSection';
 import { Footer } from './components/Footer';
@@ -74,16 +73,13 @@ export default function App() {
         {/* 2ª Dobra: Como Funciona o Mega Feirão Solar 12/12 + VSL */}
         <VideoModalSection onGoToForm={scrollToForm} />
 
-        {/* 3ª Dobra: Benefícios Oficiais do Feirão */}
-        <BenefitsSection />
-
-        {/* 4ª Dobra: Simulador de Economia Instantâneo */}
+        {/* 3ª Dobra: Simulador de Economia Instantâneo */}
         <SolarCalculator onApplyToForm={handleApplyCalculatorRange} />
 
-        {/* 5ª Dobra: Cobertura Regional GO & DF */}
+        {/* 4ª Dobra (Penúltima): Provas Sociais com Casos Reais + Regiões Atendidas */}
         <RegionalCoverage onCtaClick={scrollToForm} />
 
-        {/* 6ª Dobra: Dúvidas Frequentes */}
+        {/* 5ª Dobra (Última): Dúvidas Frequentes */}
         <FAQSection />
       </main>
 

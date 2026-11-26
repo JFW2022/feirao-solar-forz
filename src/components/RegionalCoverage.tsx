@@ -195,39 +195,39 @@ export function RegionalCoverage({ onCtaClick }: RegionalCoverageProps) {
               +700
             </p>
             <p className="mt-1 text-xs font-extrabold uppercase tracking-wider text-slate-300">
-              Clientes Atendidos
+              Usinas Instaladas
             </p>
-            <p className="text-[11px] text-slate-400">Em Goiás e Distrito Federal</p>
+            <p className="text-[11px] text-slate-400">Casas, empresas e agronegócio</p>
           </div>
 
           <div>
             <p className="font-display text-3xl font-black text-emerald-400 sm:text-4xl">
-              Até 95%
+              R$ 12M+
             </p>
             <p className="mt-1 text-xs font-extrabold uppercase tracking-wider text-slate-300">
-              Redução na Conta
+              Economia Gerada
             </p>
-            <p className="text-[11px] text-slate-400">Economia real todo mês</p>
+            <p className="text-[11px] text-slate-400">Dinheiro poupado pelos clientes</p>
           </div>
 
           <div>
             <p className="font-display text-3xl font-black text-[#38BDF8] sm:text-4xl">
-              Até 30 Anos
+              100%
             </p>
             <p className="mt-1 text-xs font-extrabold uppercase tracking-wider text-slate-300">
-              Garantia de Painéis
+              Aprovação Técnica
             </p>
-            <p className="text-[11px] text-slate-400">Eficiência linear assegurada</p>
+            <p className="text-[11px] text-slate-400">Projetos com ART no CREA</p>
           </div>
 
           <div>
             <p className="font-display text-3xl font-black text-white sm:text-4xl">
-              100%
+              Nota 5.0
             </p>
             <p className="mt-1 text-xs font-extrabold uppercase tracking-wider text-slate-300">
-              Engenharia no CREA
+              Satisfação Máxima
             </p>
-            <p className="text-[11px] text-slate-400">Homologação ágil garantida</p>
+            <p className="text-[11px] text-slate-400">Avaliações reais no pós-venda</p>
           </div>
         </div>
 
@@ -244,31 +244,27 @@ export function RegionalCoverage({ onCtaClick }: RegionalCoverageProps) {
             </h3>
 
             <p className="mt-3 text-sm leading-relaxed text-slate-300 sm:text-base">
-              Diferente de instaladores genéricos, a equipe de engenharia da FORZ
-              domina todos os procedimentos técnicos locais, garantindo aprovação
-              rápida de parecer de acesso e troca de medidor sem complicação.
+              Nossos engenheiros cuidam de cada etapa técnica junto às distribuidoras locais, garantindo troca rápida de medidor e vistoria sem burocracia.
             </p>
 
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div className="rounded-2xl border border-[#0099FF]/30 bg-[#041026] p-5">
                 <div className="mb-2 flex items-center gap-2 text-sm font-black text-[#FFB800]">
                   <Zap className="h-4 w-4" />
-                  Equatorial Energia GO
+                  Equatorial Goiás
                 </div>
                 <p className="text-xs leading-relaxed text-slate-300">
-                  Projetos dimensionados para o padrão Equatorial Goiás com
-                  rápida vistoria técnica e ligação do medidor bidirecional.
+                  Troca do medidor bidirecional e vistoria técnica prioritária em todo o Estado de Goiás.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-[#0099FF]/30 bg-[#041026] p-5">
                 <div className="mb-2 flex items-center gap-2 text-sm font-black text-[#38BDF8]">
                   <Zap className="h-4 w-4" />
-                  Neoenergia Brasília (DF)
+                  Neoenergia Brasília
                 </div>
                 <p className="text-xs leading-relaxed text-slate-300">
-                  Homologação especializada para condomínios, residências e
-                  comércios dentro das normas vigentes do Distrito Federal.
+                  Projetos aprovados para condomínios, residências e comércios no Distrito Federal.
                 </p>
               </div>
             </div>

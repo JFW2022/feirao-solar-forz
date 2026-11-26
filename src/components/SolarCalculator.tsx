@@ -91,8 +91,7 @@ export function SolarCalculator({ onApplyToForm }: SolarCalculatorProps) {
                 ~ {formatCurrencyBRL(estimatedInstallment)}/mês
               </p>
               <p className="mt-1 text-xs text-slate-400">
-                Menor que a sua fatura atual de{' '}
-                {formatCurrencyBRL(monthlyBill)}: o sistema se paga sozinho.
+                Parcela estimada abaixo do valor que você já paga mensalmente para a concessionária.
               </p>
             </div>
           </div>
