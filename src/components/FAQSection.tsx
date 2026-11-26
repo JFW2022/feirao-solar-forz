@@ -20,7 +20,7 @@ const FAQ_ITEMS: FAQItem[] = [
   {
     question: 'Quais são as garantias de fábrica dos equipamentos e da instalação?',
     answer:
-      'Os painéis solares Tier-1 utilizados pela FORZ contam com garantia de fábrica de 25 anos de eficiência linear. Os inversores possuem garantia estendida de fábrica conforme a marca homologada, e você ainda conta com garantia técnica da própria FORZ sobre a instalação e suporte presencial local.',
+      'Os painéis solares Tier-1 utilizados pela FORZ contam com garantia de fábrica de até 30 anos de eficiência linear. Os inversores possuem garantia estendida de fábrica conforme a marca homologada, e você ainda conta com a responsabilidade técnica de engenharia registrada no CREA e suporte presencial dedicado da FORZ.',
   },
   {
     question: 'Como funciona o desconto de 15% OFF e o parcelamento em até 120x no Feirão?',

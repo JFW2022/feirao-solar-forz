@@ -197,7 +197,7 @@ export function VideoModalSection({ onGoToForm }: VideoModalSectionProps) {
                 USINA GERANDO ECONOMIA DE ATÉ 95%
               </p>
               <p className="text-xs font-medium text-slate-300 sm:text-sm">
-                25 anos de garantia, monitoramento pelo celular e valorização do
+                Até 30 anos de garantia de eficiência, monitoramento pelo celular e valorização do
                 imóvel
               </p>
             </div>
@@ -321,7 +321,7 @@ export function VideoModalSection({ onGoToForm }: VideoModalSectionProps) {
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle2 className="h-4 w-4 shrink-0 text-[#FFB800]" />
-                      Mais de 80 clientes atendidos com garantia
+                      Mais de 700 clientes atendidos com garantia total
                     </li>
                   </ul>
                 </div>

@@ -116,14 +116,14 @@ export function LeadForm({ selectedBillRange, onSuccess }: LeadFormProps) {
       <div className="mb-5 border-b border-slate-100 pb-4">
         <div className="mb-1.5 inline-flex items-center gap-1.5 rounded-full bg-[#041026] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#FFB800]">
           <Zap className="h-3.5 w-3.5 fill-[#FFB800] text-[#FFB800]" />
-          15% OFF Exclusivo • Até 120x
+          Mega Feirão Solar 12/12 • Até 15% OFF
         </div>
         <h2 className="font-display text-xl font-black tracking-tight text-[#041026] sm:text-2xl">
           Garanta sua condição do Feirão
         </h2>
         <p className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">
-          Preencha em 30 segundos e libere o acesso ao{' '}
-          <strong className="text-[#003882]">Grupo VIP do Feirão</strong>.
+          Preencha em 30 segundos e garanta sua vaga no{' '}
+          <strong className="text-[#003882]">Grupo VIP Mega Feirão Solar 12/12</strong>.
         </p>
       </div>
 

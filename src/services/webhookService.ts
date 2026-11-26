@@ -21,8 +21,9 @@ export function buildLeadPayload(values: LeadFormValues): LeadPayload {
     concessionaria,
     valorContaLuz: values.valorContaLuz,
     tipoImovel: values.tipoImovel,
-    campanha: 'Feirão do Ano FORZ Energia Solar',
-    condicaoFeirao: '15% OFF no Feirão + Até 120x',
+    campanha: 'Mega Feirão Solar 12/12',
+    condicaoFeirao:
+      'Até 15% OFF + Até 120x S/ Entrada + Até 120 dias de carência',
     utm,
     referrer: typeof document !== 'undefined' ? document.referrer || 'direto' : 'direto',
     pageUrl: typeof window !== 'undefined' ? window.location.href : '',

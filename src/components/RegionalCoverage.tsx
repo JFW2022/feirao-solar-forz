@@ -35,7 +35,7 @@ export function RegionalCoverage({ onCtaClick }: RegionalCoverageProps) {
           <div className="lg:col-span-6">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider text-emerald-300">
               <Award className="h-4 w-4" />
-              +80 Clientes Atendidos com Sucesso
+              +700 Clientes Atendidos com Sucesso
             </div>
 
             <h2 className="font-display text-3xl font-black tracking-tight text-white sm:text-4xl">
@@ -45,7 +45,7 @@ export function RegionalCoverage({ onCtaClick }: RegionalCoverageProps) {
 
             <p className="mt-4 text-base leading-relaxed text-slate-300">
               Diferente de empresas genéricas de fora, a FORZ conhece cada
-              exigência técnica das concessionárias da nossa região — garantindo
+              exigência técnica das concessionárias da nossa região, garantindo
               aprovação rápida e pós-venda presencial.
             </p>
 

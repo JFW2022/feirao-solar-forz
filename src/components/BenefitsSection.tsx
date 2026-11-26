@@ -8,31 +8,31 @@ import {
 const BENEFITS = [
   {
     icon: Percent,
-    tag: 'Condição de Feirão',
-    title: '15% OFF Direto no Projeto',
+    tag: 'Condição Especial',
+    title: 'Até 15% de Desconto Real',
     description:
-      'Desconto real exclusivo para cadastros realizados durante a janela do Feirão FORZ, válido para projetos residenciais, comerciais e rurais.',
+      'Desconto real e exclusivo para quem estiver no Grupo VIP Mega Feirão Solar 12/12, com condições válidas para projetos em todo GO e DF.',
   },
   {
     icon: CalendarClock,
-    tag: 'Fluxo de Caixa Positivo',
-    title: 'Parcelas em até 120x',
+    tag: 'Sem Entrada',
+    title: 'Até 120x com 120 Dias de Carência',
     description:
-      'Financiamento facilitado em até 120 meses com parcelas planejadas para caber dentro da própria economia que você já deixa de pagar na conta de luz.',
+      'Prazo de até 120x sem entrada: até 120 dias de carência para o primeiro pagamento e parcelas fixas podendo ficar até 40% a menos que a sua conta atual de energia.',
   },
   {
     icon: FileCheck2,
-    tag: 'Zero Dor de Cabeça',
-    title: 'Homologação Rápida GO e DF',
+    tag: 'Agilidade Total',
+    title: 'Homologação e Instalação em até 30 Dias',
     description:
-      'Equipe de engenharia especialista nas normas da Equatorial Energia Goiás e Neoenergia Brasília para aprovação ágil do seu parecer de acesso.',
+      'Homologação e instalação técnica ágil junto à Equatorial Goiás e Neoenergia DF: seu sistema funcionando no prazo máximo de 30 dias.',
   },
   {
     icon: ShieldCheck,
-    tag: 'Segurança Patrimonial',
-    title: '25 Anos de Garantia de Fábrica',
+    tag: 'Segurança Máxima',
+    title: 'Garantia de até 30 Anos',
     description:
-      'Trabalhamos exclusivamente com painéis fotovoltaicos e inversores Tier-1 certificados pelo INMETRO, com monitoramento em tempo real pelo celular.',
+      'Garantia de até 30 anos de eficiência energética dos painéis, equipamentos certificados pelo INMETRO, empresa registrada no CREA e pós-venda dedicado.',
   },
 ];
 

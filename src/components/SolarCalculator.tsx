@@ -20,7 +20,7 @@ export function SolarCalculator({ onApplyToForm }: SolarCalculatorProps) {
   // Projeção conservadora realista: até 95% de economia descontando taxa mínima
   const monthlySavings = Math.round(monthlyBill * 0.92);
   const annualSavings = monthlySavings * 12;
-  const savings25Years = annualSavings * 25;
+  const savings30Years = annualSavings * 30;
   // Parcela estimada com 15% OFF no Feirão e prazo longo até 120x fica abaixo da conta atual
   const estimatedInstallment = Math.round(monthlyBill * 0.78);
 
@@ -92,7 +92,7 @@ export function SolarCalculator({ onApplyToForm }: SolarCalculatorProps) {
               </p>
               <p className="mt-1 text-xs text-slate-400">
                 Menor que a sua fatura atual de{' '}
-                {formatCurrencyBRL(monthlyBill)} — o sistema se paga sozinho.
+                {formatCurrencyBRL(monthlyBill)}: o sistema se paga sozinho.
               </p>
             </div>
           </div>
@@ -129,14 +129,14 @@ export function SolarCalculator({ onApplyToForm }: SolarCalculatorProps) {
 
             <div className="rounded-2xl border border-[#FFB800]/30 bg-gradient-to-r from-[#003882]/60 to-[#041026] p-6">
               <p className="text-xs font-bold uppercase tracking-wider text-[#FFB800]">
-                Economia Acumulada em 25 Anos (Vida Útil Garantida)
+                Economia Acumulada em 30 Anos (Garantia de Eficiência)
               </p>
               <p className="mt-1 font-display text-4xl font-black text-white sm:text-5xl">
-                {formatCurrencyBRL(savings25Years)}
+                {formatCurrencyBRL(savings30Years)}
               </p>
               <p className="mt-2 text-xs leading-relaxed text-slate-300">
                 *Estimativa referencial considerando irradiação solar de GO/DF e
-                eficiência de módulos Tier-1. Solicite sua engenharia exata no
+                eficiência de módulos Tier-1 certificados pelo INMETRO. Solicite sua engenharia exata no
                 formulário.
               </p>
             </div>

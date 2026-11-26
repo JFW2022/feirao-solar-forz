@@ -11,14 +11,14 @@ export function Footer({ onCtaClick }: { onCtaClick: () => void }) {
             />
             <p className="mt-3 max-w-md text-sm text-slate-400">
               Soluções completas em energia fotovoltaica residencial, comercial,
-              rural e industrial. +80 clientes atendidos em Goiás e Distrito
+              rural e industrial. +700 clientes atendidos em Goiás e Distrito
               Federal.
             </p>
           </div>
 
           <div className="flex flex-col items-start gap-3 md:items-end">
             <p className="text-xs font-bold uppercase tracking-wider text-[#FFB800]">
-              Feirão de Energia Solar FORZ — 15% OFF • Até 120x
+              Mega Feirão Solar 12/12 • Até 15% OFF • Até 120x S/ Entrada
             </p>
             <button
               type="button"
