@@ -17,7 +17,7 @@ export interface LeadFormValues {
   cidade: string;
   nome: string;
   whatsapp: string;
-  email: string;
+  email?: string;
   valorContaLuz: string;
   tipoImovel: TipoImovel;
   aceitePrivacidade: boolean;
@@ -25,7 +25,7 @@ export interface LeadFormValues {
 
 export interface LeadPayload {
   nome: string;
-  email: string;
+  email?: string;
   whatsapp: string;
   whatsappLimpo: string;
   estado: EstadoAtendido;

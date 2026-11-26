@@ -40,7 +40,6 @@ export function LeadForm({ selectedBillRange, onSuccess }: LeadFormProps) {
   const [cidade, setCidade] = useState('');
   const [nome, setNome] = useState('');
   const [whatsapp, setWhatsapp] = useState('');
-  const [email, setEmail] = useState('');
   const [valorContaLuz, setValorContaLuz] = useState(
     selectedBillRange || FAIXAS_CONTA[1]
   );
@@ -89,7 +88,6 @@ export function LeadForm({ selectedBillRange, onSuccess }: LeadFormProps) {
       cidade,
       nome,
       whatsapp,
-      email,
       valorContaLuz,
       tipoImovel,
       aceitePrivacidade,
@@ -114,17 +112,13 @@ export function LeadForm({ selectedBillRange, onSuccess }: LeadFormProps) {
     >
       {/* Header do Card */}
       <div className="mb-5 border-b border-slate-100 pb-4">
-        <div className="mb-1.5 inline-flex items-center gap-1.5 rounded-full bg-[#041026] px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#FFB800]">
+        <div className="mb-2 inline-flex items-center gap-1.5 rounded-full bg-[#041026] px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-wider text-[#FFB800]">
           <Zap className="h-3.5 w-3.5 fill-[#FFB800] text-[#FFB800]" />
-          Mega Feirão Solar 12/12 • Até 15% OFF
+          15% OFF Exclusivo • Vagas Limitadas!
         </div>
-        <h2 className="font-display text-xl font-black tracking-tight text-[#041026] sm:text-2xl">
-          Garanta sua condição do Feirão
+        <h2 className="font-display text-xl font-black leading-tight tracking-tight text-[#041026] sm:text-2xl">
+          Preencha e garanta sua vaga para ter a melhor condição no nosso feirão
         </h2>
-        <p className="mt-1 text-xs font-medium text-slate-600 sm:text-sm">
-          Preencha em 30 segundos e garanta sua vaga no{' '}
-          <strong className="text-[#003882]">Grupo VIP Mega Feirão Solar 12/12</strong>.
-        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-3.5" noValidate>
@@ -231,45 +225,24 @@ export function LeadForm({ selectedBillRange, onSuccess }: LeadFormProps) {
           />
         </div>
 
-        {/* WhatsApp e Email */}
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <div>
-            <label
-              htmlFor="lead-whatsapp"
-              className="mb-1 block text-xs font-bold text-slate-700"
-            >
-              WhatsApp com DDD *
-            </label>
-            <input
-              id="lead-whatsapp"
-              type="tel"
-              required
-              autoComplete="tel"
-              value={whatsapp}
-              onChange={handlePhoneChange}
-              placeholder="(62) 99999-9999"
-              className="w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0066FF] focus:outline-none focus:ring-2 focus:ring-[#0066FF]/20"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="lead-email"
-              className="mb-1 block text-xs font-bold text-slate-700"
-            >
-              E-mail *
-            </label>
-            <input
-              id="lead-email"
-              type="email"
-              required
-              autoComplete="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="seu@email.com"
-              className="w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0066FF] focus:outline-none focus:ring-2 focus:ring-[#0066FF]/20"
-            />
-          </div>
+        {/* WhatsApp */}
+        <div>
+          <label
+            htmlFor="lead-whatsapp"
+            className="mb-1 block text-xs font-bold text-slate-700"
+          >
+            WhatsApp com DDD *
+          </label>
+          <input
+            id="lead-whatsapp"
+            type="tel"
+            required
+            autoComplete="tel"
+            value={whatsapp}
+            onChange={handlePhoneChange}
+            placeholder="(62) 99999-9999"
+            className="w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-[#0066FF] focus:outline-none focus:ring-2 focus:ring-[#0066FF]/20"
+          />
         </div>
 
         {/* Valor médio da conta */}
@@ -330,11 +303,11 @@ export function LeadForm({ selectedBillRange, onSuccess }: LeadFormProps) {
           {isSubmitting ? (
             <>
               <Loader2 className="h-5 w-5 animate-spin" />
-              Gerando simulação...
+              Garantindo vaga VIP...
             </>
           ) : (
             <>
-              Quero 15% OFF no Feirão
+              ENTRAR NO GRUPO VIP DO FEIRÃO
               <ArrowRight className="h-5 w-5" />
             </>
           )}

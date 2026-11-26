@@ -13,7 +13,7 @@ export function buildLeadPayload(values: LeadFormValues): LeadPayload {
 
   return {
     nome: values.nome.trim(),
-    email: values.email.trim(),
+    email: (values.email || '').trim(),
     whatsapp: values.whatsapp.trim(),
     whatsappLimpo: cleanPhoneDigits(values.whatsapp),
     estado: values.estado,
