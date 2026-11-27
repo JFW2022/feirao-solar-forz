@@ -1,7 +1,6 @@
 import {
   MapPin,
   CheckCircle2,
-  Award,
   Zap,
   Star,
   ArrowRight,
@@ -93,10 +92,6 @@ export function RegionalCoverage({ onCtaClick }: RegionalCoverageProps) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Topo da Seção - Provas Sociais */}
         <div className="mb-12 max-w-3xl">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider text-emerald-300">
-            <Award className="h-4 w-4" />
-            Casos Reais • Prova Social Comprovada
-          </div>
           <h2 className="font-display text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
             Quem já fechou com a FORZ{' '}
             <span className="text-[#FFB800]">não volta a pagar caro</span> na
@@ -140,9 +135,6 @@ export function RegionalCoverage({ onCtaClick }: RegionalCoverageProps) {
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="h-4 w-4 fill-[#FFB800]" />
                       ))}
-                      <span className="ml-1.5 text-xs font-bold text-slate-300">
-                        5.0 • Avaliação Verificada
-                      </span>
                     </div>
 
                     {/* Comparativo de Fatura (Antes vs Depois) */}
