@@ -43,11 +43,6 @@ const FAQ_ITEMS: FAQItem[] = [
       'Sim. O sistema fotovoltaico é um patrimônio do titular, não do imóvel. Se você se mudar, nossa equipe técnica pode desinstalar e reinstalar os equipamentos no seu novo endereço em qualquer cidade atendida em GO ou DF. Além disso, você também pode deixar o sistema gerando energia e compensar a fatura de outros imóveis cadastrados sob o mesmo CPF ou CNPJ.',
   },
   {
-    question: 'Como funciona o Grupo VIP do WhatsApp? Vou receber muitas mensagens?',
-    answer:
-      'Não. O Grupo VIP do Feirão é 100% silencioso e com envio de mensagens bloqueado para membros. Apenas os administradores oficiais da FORZ enviam avisos importantes, pré-aprovações de crédito e os links dos lotes com 15% OFF no dia 12/12. Você não receberá conversas paralelas e pode sair quando quiser.',
-  },
-  {
     question: 'Preciso pagar alguma mensalidade ou taxa recorrente para a FORZ após a instalação?',
     answer:
       'Zero mensalidades. A usina é 100% sua. Você não paga nenhuma assinatura ou taxa recorrente para a FORZ. Você acompanha a geração da sua usina em tempo real pelo aplicativo gratuito no celular e conta com nossa equipe de suporte sempre que precisar.',
